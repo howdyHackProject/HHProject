@@ -16,4 +16,5 @@ class HomePage(TemplateView):
             user.age = request.POST.get("age")
             user.username = request.POST.get("username")
             user.password = request.POST.get("password")
+            user.save()
         return render(request, 'homePage.html', context=None)
