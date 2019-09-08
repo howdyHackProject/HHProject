@@ -14,3 +14,11 @@ class LoginPageView(TemplateView):
 class HomePageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'home.html', context=None)
+
+class ProfilePageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'profile.html', context=None)
+
+class EditProfilePageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'editProfile.html', context=None)
