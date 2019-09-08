@@ -19,8 +19,12 @@ class HomePageView(TemplateView):
 
 class ProfilePageView(TemplateView):
     def get(self, request, **kwargs):
+
         user = User(first_name="kjdf", last_name="kdjfkejfdsfef", interests = ["first thing", "jkdjke"])
-        context = {'user1' : user}
+        
+        context = {
+            'user1' : user
+        }
         return render(request, 'profile.html', context)
 
 class EditProfilePageView(TemplateView):
