@@ -1,18 +1,18 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from ..models.User import User
+from mainApp.models import User
 
 class ProfilePage(TemplateView):
     def get(self, request, **kwargs):
 
-        u = User(
-            first_name="kjdf", 
-            last_name="kdjfkejfdsfef", 
-            interests = ["first thing", "jkdjke"]
-        )
-        context = {'user' : u}
-        return render(request, 'profilePage.html', context)
+        # u = User(
+        #     first_name="kjdf", 
+        #     last_name="kdjfkejfdsfef", 
+        #     interests = ["first thing", "jkdjke"]
+        # )
+        # context = {'user' : u}
+        return render(request, 'profilePage.html', context=None)
 
         # user = User(first_name="kjdf", last_name="kdjfkejfdsfef", interests = ["first thing", "jokes"])
         # user2 = User(first_name="Jane", last_name="Phillip", interests = ["basketball","singing"])

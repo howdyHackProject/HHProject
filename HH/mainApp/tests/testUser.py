@@ -5,7 +5,11 @@ from mainApp.database.userDao import UserDao
 class TestUser(TestCase):
 
     def setUp(self):
-        self.u = User(first_name = "jargo", last_name="picklsefick", interests = ["thingg", "thing", "other thing"])
+        self.u = User(
+            firstName = "a", 
+            lastName = "b", 
+            interests = ["walk", "run", "sit"]
+            )
         self.dao = UserDao()
 
     def tearDown(self):
@@ -18,6 +22,6 @@ class TestUser(TestCase):
         # act
         user = self.dao.get_user()
         # assert
-        self.assertEqual(user.first_name, "jargo")
+        self.assertEqual(user.first_name, "a")
     
 
