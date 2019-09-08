@@ -15,13 +15,13 @@ class LoginPageView(TemplateView):
 
 class HomePageView(TemplateView):
     def get(self, request, **kwargs):
-        user = User(first_name="kjdf", last_name="kdjfkejfdsfef", interests = ["first thing", "jkdjke"])
-        context = {'user1' : user}
-        return render(request, 'home.html', context)
+        return render(request, 'home.html', context=None)
 
 class ProfilePageView(TemplateView):
     def get(self, request, **kwargs):
-        return render(request, 'profile.html', context=None)
+        user = User(first_name="kjdf", last_name="kdjfkejfdsfef", interests = ["first thing", "jkdjke"])
+        context = {'user1' : user}
+        return render(request, 'profile.html', context)
 
 class EditProfilePageView(TemplateView):
     def get(self, request, **kwargs):
