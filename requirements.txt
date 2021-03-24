@@ -65,7 +65,7 @@ qtconsole==4.4.4
 Random-Word==1.0.2
 requests==2.21.0
 requests-oauthlib==1.2.0
-rsa==4.0
+rsa==4.1
 scipy==1.2.1
 Send2Trash==1.5.0
 six==1.11.0
